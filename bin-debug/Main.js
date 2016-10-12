@@ -156,18 +156,59 @@ var Main = (function (_super) {
         page1.addChild(line);*/
         var qipao = this.createBitmapByName("qipao_png");
         page1.addChild(qipao);
-        qipao.width = 200;
-        qipao.height = 200;
-        qipao.x = stageW / 2;
-        qipao.y = stageH / 2;
-        /*
+        qipao.width = 120;
+        qipao.height = 120;
+        qipao.x = stageW - qipao.width;
+        qipao.y = stageH - qipao.height;
+        qipao.alpha = 0.3;
+        var qipao1 = this.createBitmapByName("qipao_png");
+        page1.addChild(qipao1);
+        qipao1.width = 45;
+        qipao1.height = 45;
+        qipao1.x = stageW - qipao.width;
+        qipao1.y = stageH - qipao.height;
+        qipao1.alpha = 0.8;
+        var qipao2 = this.createBitmapByName("qipao_png");
+        page1.addChild(qipao2);
+        qipao2.width = 80;
+        qipao2.height = 80;
+        qipao2.x = stageW - qipao.width;
+        qipao2.y = stageH - qipao.height;
+        qipao2.alpha = 0.9;
+        var qipao3 = this.createBitmapByName("qipao_png");
+        page1.addChild(qipao3);
+        qipao3.width = 74;
+        qipao3.height = 74;
+        qipao3.x = stageW - qipao.width;
+        qipao3.y = stageH - qipao.height;
+        qipao3.alpha = 0.4;
+        var qipao4 = this.createBitmapByName("qipao_png");
+        page1.addChild(qipao4);
+        qipao4.width = 71;
+        qipao4.height = 71;
+        qipao4.x = stageW - qipao.width;
+        qipao4.y = stageH - qipao.height;
+        qipao4.alpha = 0.6;
         function launchTween() {
-             egret.Tween.get( qipao, {loop:true} )
-            .to( {"alpha":0}, 600 );
+            egret.Tween.get(qipao, { loop: true })
+                .to({ "x": 113, "y": 653 }, 1600)
+                .to({ "x": 0, "y": 0 }, 2600);
+            egret.Tween.get(qipao1, { loop: true })
+                .to({ "x": 321, "y": 342 }, 2600)
+                .to({ "x": 0, "y": 0 }, 1600);
+            egret.Tween.get(qipao2, { loop: true })
+                .to({ "x": 215, "y": 711 }, 3600)
+                .to({ "x": 0, "y": 0 }, 3600);
+            egret.Tween.get(qipao3, { loop: true })
+                .to({ "x": 335, "y": 777 }, 1600)
+                .to({ "x": 35, "y": 0 }, 1600);
+            egret.Tween.get(qipao4, { loop: true })
+                .to({ "x": 402, "y": 512 }, 2600)
+                .to({ "x": 210, "y": 0 }, 2600);
         }
-        page1.addEventListener( egret.Event.ENTER_FRAME, ( evt:egret.Event )=>{
+        page1.addEventListener(egret.Event.ENTER_FRAME, function (evt) {
             launchTween();
-        }, this );*/
+        }, this);
         //page2 - start 
         var sky2 = this.createBitmapByName("002_jpg");
         page2.addChild(sky2);
@@ -308,9 +349,9 @@ var Main = (function (_super) {
                 .to({ "y": 800 }, 200);
             //按钮
             egret.Tween.get(icon, {})
-                .to({ "alpha": 0 }, 600);
+                .to({ "x": 0, "y": 0 }, 600);
             egret.Tween.get(logo0, {})
-                .to({ "alpha": 0 }, 600);
+                .to({ "x": 0, "y": 0 }, 600);
             //text
             egret.Tween.get(text1, {})
                 .to({ "alpha": 1 }, 600);
