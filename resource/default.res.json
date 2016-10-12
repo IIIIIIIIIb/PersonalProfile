@@ -1,0 +1,45 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,001_jpg,002_jpg,003_jpg,touxiang_png,logo_png,qopao_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "001_jpg",
+			"type": "image",
+			"url": "assets/001.jpg"
+		},
+		{
+			"name": "002_jpg",
+			"type": "image",
+			"url": "assets/002.jpg"
+		},
+		{
+			"name": "003_jpg",
+			"type": "image",
+			"url": "assets/003.jpg"
+		},
+		{
+			"name": "touxiang_png",
+			"type": "image",
+			"url": "assets/touxiang.png"
+		},
+		{
+			"name": "logo_png",
+			"type": "image",
+			"url": "assets/logo.png"
+		},
+		{
+			"name": "qopao_png",
+			"type": "image",
+			"url": "assets/qopao.png"
+		}
+	]
+}
