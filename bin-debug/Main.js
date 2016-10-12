@@ -195,7 +195,7 @@ var Main = (function (_super) {
         }, this);
         var topMask = new egret.Shape();
         topMask.graphics.beginFill(0x000000, 0.5);
-        topMask.graphics.drawRect(0, 0, 400, 150);
+        topMask.graphics.drawRect(0, 0, 380, 80);
         topMask.graphics.endFill();
         topMask.x = 0;
         topMask.y = 50;
@@ -211,7 +211,7 @@ var Main = (function (_super) {
         page2.addChild(topMask2);
         var topMask3 = new egret.Shape();
         topMask3.graphics.beginFill(0x000000, 0.5);
-        topMask3.graphics.drawRect(0, 0, 400, 150);
+        topMask3.graphics.drawRect(0, 0, 350, 50);
         topMask3.graphics.endFill();
         topMask3.x = 0;
         topMask3.y = 550;
@@ -219,7 +219,7 @@ var Main = (function (_super) {
         page2.addChild(topMask3);
         var topMask4 = new egret.Shape();
         topMask4.graphics.beginFill(0x000000, 0.5);
-        topMask4.graphics.drawRect(0, 0, 400, 150);
+        topMask4.graphics.drawRect(0, 0, 400, 120);
         topMask4.graphics.endFill();
         topMask4.x = stageW - 400;
         topMask4.y = 800;
@@ -249,7 +249,7 @@ var Main = (function (_super) {
         title.y = stageH / 2 - 250;
         var text1 = new egret.TextField();
         page2.addChild(text1);
-        text1.alpha = 1;
+        text1.alpha = 0;
         text1.textColor = 0xffffff;
         text1.textAlign = "center";
         text1.fontFamily = "Microsoft YaHei";
@@ -259,7 +259,7 @@ var Main = (function (_super) {
         text1.y = 60;
         var text2 = new egret.TextField();
         page2.addChild(text2);
-        text2.alpha = 1;
+        text2.alpha = 0;
         text2.textColor = 0xffffff;
         text2.textAlign = "center";
         text2.fontFamily = "Microsoft YaHei";
@@ -269,7 +269,7 @@ var Main = (function (_super) {
         text2.y = 310;
         var text3 = new egret.TextField();
         page2.addChild(text3);
-        text3.alpha = 1;
+        text3.alpha = 0;
         text3.textColor = 0xffffff;
         text3.textAlign = "center";
         text3.fontFamily = "Microsoft YaHei";
@@ -279,11 +279,11 @@ var Main = (function (_super) {
         text3.y = 560;
         var text4 = new egret.TextField();
         page2.addChild(text4);
-        text4.alpha = 1;
+        text4.alpha = 0;
         text4.textColor = 0xffffff;
         text4.textAlign = "left";
         text4.fontFamily = "Microsoft YaHei";
-        text4.text = "qq852289115 \n \n手机15650752616";
+        text4.text = "就这样吧 \n qq852289115\n 电话:15650752616";
         text4.size = 24;
         text4.x = 100;
         text4.y = 810;
@@ -311,6 +311,15 @@ var Main = (function (_super) {
                 .to({ "alpha": 0 }, 600);
             egret.Tween.get(logo0, {})
                 .to({ "alpha": 0 }, 600);
+            //text
+            egret.Tween.get(text1, {})
+                .to({ "alpha": 1 }, 600);
+            egret.Tween.get(text2, {})
+                .to({ "alpha": 1 }, 600);
+            egret.Tween.get(text3, {})
+                .to({ "alpha": 1 }, 600);
+            egret.Tween.get(text4, {})
+                .to({ "alpha": 1 }, 600);
         }
         //页面滑动功能
         this.scrollRect = new egret.Rectangle(0, 0, this.stage.stageWidth, 3 * stageH);
